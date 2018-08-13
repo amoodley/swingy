@@ -3,38 +3,31 @@ package amoodley.model.characters;
 public class Character {
 
     protected String        _name;
-    protected int           _level;
-    protected int           _experience;
     protected int           _attack;
     protected int           _defense;
     protected int           _hitPoints;
     protected int           _maxHitPoints;
+    protected int           _xPos;
+    protected int           _yPos;
+
 
     public Character(){
 
     }
 
-    public Character(String name, int level, int experience, int attack, int defense, int hitPoints, int maxHitPoints){
+    public Character(String name, int attack, int defense, int hitPoints, int maxHitPoints, int xPos, int yPos){
 
         this._name = name;
-        this._level = level;
-        this._experience= experience;
         this._attack = attack;
         this._defense = defense;
         this._hitPoints = hitPoints;
         this._maxHitPoints = maxHitPoints;
+        this._xPos = xPos;
+        this._yPos = yPos;
     }
 
     public String getName(){
         return (this._name);
-    }
-
-    public int getLevel(){
-        return (this._level);
-    }
-
-    public int getExperience(){
-        return (this._experience);
     }
 
     public int getAttack(){
@@ -55,14 +48,6 @@ public class Character {
 
     public void setName(String name){
         this._name = name;
-    }
-
-    public void setLevel(int level){
-        this._level = level;
-    }
-
-    public void setExperience(int experience){
-        this._experience = experience;
     }
 
     public void setAttack(int attack){
