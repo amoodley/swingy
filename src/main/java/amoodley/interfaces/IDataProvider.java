@@ -1,7 +1,6 @@
 package amoodley.interfaces;
 
 import amoodley.model.characters.Hero;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.List;
 

@@ -1,10 +1,12 @@
 package amoodley.cli.view;
 
+import amoodley.providers.DataProvider;
 import amoodley.utilities.Menus;
 import amoodley.enums.CharacterType;
 import amoodley.providers.Cache;
-import amoodley.model.characters.Character;
+import amoodley.factories.HeroFactory;
 import amoodley.model.characters.Hero;
+import amoodley.config.Config;
 
 import java.util.Scanner;
 
@@ -115,6 +117,7 @@ public class ConsoleView {
 
             name = reader.nextLine();
         }
-        _hero = HeroFactory.newHero(name, hType, null);
+        _hero = HeroFactory.newHero(name, hType);
+        DataProvider dataProvider = new DataProvider(Config.DATA_PPROVIDER);
     }
 }

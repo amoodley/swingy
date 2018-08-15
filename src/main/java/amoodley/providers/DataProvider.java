@@ -1,5 +1,6 @@
 package amoodley.providers;
 
+import amoodley.config.Config;
 import amoodley.interfaces.IDataProvider;
 import amoodley.model.characters.Hero;
 import amoodley.interfaces.IDataProvider;
@@ -12,6 +13,13 @@ public class DataProvider implements IDataProvider {
 
     public DataProvider (){
 
+    }
+
+    public DataProvider (DataProviderType dataProviderType){
+
+        if (Config.DATA_PROVIDER == dataProviderType){
+            this._provider = new FileData(Config.HERO_TEXT_FILE_NAME);
+        }
     }
 
     public List<Hero> getHeroList(){

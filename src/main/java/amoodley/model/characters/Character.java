@@ -1,8 +1,11 @@
 package amoodley.model.characters;
 
+import amoodley.enums.CharacterType;
+
 public class Character {
 
     protected String        _name;
+    protected CharacterType _type;
     protected int           _attack;
     protected int           _defense;
     protected int           _hitPoints;
@@ -15,9 +18,10 @@ public class Character {
 
     }
 
-    public Character(String name, int attack, int defense, int hitPoints, int maxHitPoints, int xPos, int yPos){
+    public Character(String name, CharacterType type, int attack, int defense, int hitPoints, int maxHitPoints, int xPos, int yPos){
 
         this._name = name;
+        this._type = type;
         this._attack = attack;
         this._defense = defense;
         this._hitPoints = hitPoints;
@@ -28,6 +32,10 @@ public class Character {
 
     public String getName(){
         return (this._name);
+    }
+
+    public CharacterType getType(){
+        return (this._type);
     }
 
     public int getAttack(){
