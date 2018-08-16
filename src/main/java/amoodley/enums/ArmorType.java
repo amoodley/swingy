@@ -1,4 +1,10 @@
 package amoodley.enums;
 
-public enum ArmoreType {
+public enum ArmorType {
+
+    leather,
+    steel,
+    curass,
+    spacesuit,
+    jacket
 }

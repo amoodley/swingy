@@ -1,12 +1,14 @@
 package amoodley.config;
 
 import amoodley.enums.AppDisplay;
+import amoodley.enums.DataTypeProvider;
 
 public class Config {
 
     public static AppDisplay AppDisplayMode = AppDisplay.console;
     public static boolean IS_DEVELOPMENT = false;
     public static String HERO_TEXT_FILE_NAME = "hero-stats.txt";
+    public static DataTypeProvider DATA_PROVIDER = DataTypeProvider.filedata;
 
     public static void init(String[] configs){
 

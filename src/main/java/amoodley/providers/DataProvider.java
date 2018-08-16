@@ -4,6 +4,8 @@ import amoodley.config.Config;
 import amoodley.interfaces.IDataProvider;
 import amoodley.model.characters.Hero;
 import amoodley.interfaces.IDataProvider;
+import amoodley.enums.DataTypeProvider;
+import amoodley.providers.filedata.FileData;
 
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class DataProvider implements IDataProvider {
 
     }
 
-    public DataProvider (DataProviderType dataProviderType){
+    public DataProvider (DataTypeProvider dataProviderType){
 
         if (Config.DATA_PROVIDER == dataProviderType){
             this._provider = new FileData(Config.HERO_TEXT_FILE_NAME);

@@ -1,4 +1,10 @@
 package amoodley.enums;
 
-public class HelmTyoe {
+public enum HelmType {
+
+    pot,
+    great,
+    spartan,
+    nasal,
+    frog_mouthed
 }

@@ -11,7 +11,7 @@ public class Cache {
 
     public static void init(){
 
-        DataProvider dataProvider = new DataProvider();
+        DataProvider dataProvider = new DataProvider(Config.DATA_PROVIDER);
         HeroList = dataProvider.getHeroList();
     }
 }
