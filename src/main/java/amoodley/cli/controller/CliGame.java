@@ -22,5 +22,11 @@ public class CliGame {
         System.out.println("\t2. No");
 
         i = ConsoleView.getSafeNum(scan.nextLine());
+        switch(i){
+
+            case 1:
+                System.out.println("YOUR MISSION IS TO GET TO THE END OF THE MAP. ENJOY!");
+                Maps map = new Maps();
+        }
     }
 }

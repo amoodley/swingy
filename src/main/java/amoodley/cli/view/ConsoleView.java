@@ -146,9 +146,39 @@ public class ConsoleView {
                 System.out.print(count);
                 System.out.print(seperator);
                 System.out.print(Menus.printHeroNames(heroList.get(index)));
+                count++;
+            }
+            System.out.println("\t0. Back");
+        }
+        int choice = 0;
+
+        while (true){
+
+            choice = getSafeNum(reader.nextLine());
+            if (choice == 0){
+
+                start();
+            }
+            hero = getHeroAtIndex(choice, heroList);
+            if (hero != null){
+
+                if (hero.getHitPoints() <= 0){
+
+                    System.out.println("THE HERO YOU HAVE SELECTED IS NOT AVAILABLE!");
+                    System.out.println("HERO HIT POINTS: " + hero.getHitPoints());
+                    System.out.println("TRY AGAIN!");
+                    existingHero();
+                } else {
+
+                    break ;
+                }
+            } else {
+
+                System.out.println("THE HERO YOU HAVE SELECTED DOES NOT EXIST! PLEASE TRY AGAIN!");
+                existingHero();
             }
         }
-
+        CliGame.run(hero);
     }
 
 

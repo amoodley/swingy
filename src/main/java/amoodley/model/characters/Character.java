@@ -4,6 +4,7 @@ import amoodley.enums.CharacterType;
 
 public class Character {
 
+
     protected String        _name;
     protected CharacterType _type;
     protected int           _attack;
@@ -20,6 +21,7 @@ public class Character {
 
     public Character(String name, CharacterType type, int attack, int defense, int hitPoints, int maxHitPoints, int xPos, int yPos){
 
+
         this._name = name;
         this._type = type;
         this._attack = attack;
@@ -29,6 +31,8 @@ public class Character {
         this._xPos = xPos;
         this._yPos = yPos;
     }
+
+
 
     public String getName(){
         return (this._name);

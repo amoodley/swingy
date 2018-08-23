@@ -49,7 +49,7 @@ public class HeroFactory {
         return (null);
     }
 
-    public static Hero newHero(String name, String type){
+    public static Hero newHero(String name, CharacterType type){
 
         int level = 0;
         int xp = 0;
@@ -60,7 +60,7 @@ public class HeroFactory {
         int xPos = 0;
         int yPos = 0;
 
-        CharacterType tempCharacterType = CharacterType.valueOf(type);
+        CharacterType tempCharacterType = type;
 
         switch (tempCharacterType){
             case warrior:

@@ -7,23 +7,41 @@ import amoodley.enums.WeaponType;
 
 public class Hero extends Character {
 
+
+    private static int      _idCounter = 0;
+    protected int           _id = 0;
+
     protected int           _level;
     protected int           _experience;
     protected WeaponType    _weapon;
     protected ArmorType     _armor;
     protected HelmType      _helm;
 
+    protected String        _icon;
+
+
     public Hero(){
 
     }
 
-    public Hero(String name, CharacterType type, int level, int experience, int attack, int defense, int hitPoints, int maxHitPoints, int xPos, int yPos, WeaponType weapon, ArmorType armor, HelmType helm) {
+    public Hero(String name, CharacterType type, int level, int experience, int attack, int defense, int hitPoints, int maxHitPoints, int xPos, int yPos, WeaponType weapon, ArmorType armor, HelmType helm, String icon) {
         super(name, type, attack, defense, hitPoints, maxHitPoints, xPos, yPos);
+        this._icon = icon;
+        _id = setNextId();
         this._level = level;
         this._experience = experience;
         this._weapon = weapon;
         this._armor = armor;
         this._helm = helm;
+    }
+
+    private int setNextId(){
+
+        return (++this._idCounter);
+    }
+
+    public int getId(){
+        return _id;
     }
 
     public int getLevel(){
@@ -64,5 +82,15 @@ public class Hero extends Character {
 
     public void setHelm(HelmType helm){
         this._helm = helm;
+    }
+
+    public void setXpos(int xPos){
+
+        this._xPos = xPos;
+    }
+
+    public void setYpos(int yPos){
+
+        this._yPos = yPos;
     }
 }
