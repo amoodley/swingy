@@ -1,5 +1,6 @@
 package amoodley.utilities;
 
+import amoodley.model.characters.Enemy;
 import amoodley.model.characters.Hero;
 
 public class Menus {
@@ -44,5 +45,35 @@ public class Menus {
 
         String heroNames = hero.getName() + "\n";
         return (heroNames);
+    }
+
+    public static void printMovementMenu(){
+
+        String movement = "\nCHOOSE A DIRECTION TO MOVE IN\n" +
+                "\t1. North\n" +
+                "\t2. East\n" +
+                "\t3. West\n" +
+                "\t4. South\n" +
+                "\t0. Back\n";
+        System.out.print(movement);
+    }
+
+    public static void SimulationChoice(){
+
+        String choice = "\nYOU HAVE ENCOUNTERED AN ENEMY, WHAT WILL YOU DO?\n\n" +
+                "\t1. RUN\n" +
+                "\t2. FIGHT\n";
+        System.out.print(choice);
+    }
+
+    public static void PrintFightOpponents(Hero hero, Enemy enemy){
+
+        System.out.println(hero.getName() + "\tVS\t" + enemy.getName());
+        System.out.println("Attack: " + hero.getAttack() + "\t|\t" + enemy.getAttack());
+        System.out.println("Defense: " + hero.getDefense() + "\t|\t" + enemy.getDefense());
+        System.out.println("Hit Points: " + hero.getHitPoints() + "\t|\t" + enemy.getHitPoints());
+        System.out.println("Weapon: " + hero.getWeapon() + "\t|\t" + enemy.getWeapon());
+        System.out.println("Armor: " + hero.getArmor() + "\t|\t" + enemy.getArmor());
+        System.out.println("Helm: " + hero.getHelm() + "\t|\t" + enemy.getHelm());
     }
 }

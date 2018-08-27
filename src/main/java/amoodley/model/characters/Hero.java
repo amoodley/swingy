@@ -24,8 +24,8 @@ public class Hero extends Character {
 
     }
 
-    public Hero(String name, CharacterType type, int level, int experience, int attack, int defense, int hitPoints, int maxHitPoints, int xPos, int yPos, WeaponType weapon, ArmorType armor, HelmType helm, String icon) {
-        super(name, type, attack, defense, hitPoints, maxHitPoints, xPos, yPos);
+    public Hero(String name, CharacterType type, int level, int experience, int attack, int defense, int hitPoints, WeaponType weapon, ArmorType armor, HelmType helm, String icon) {
+        super(name, type, attack, defense, hitPoints);
         this._icon = icon;
         _id = setNextId();
         this._level = level;
@@ -84,13 +84,5 @@ public class Hero extends Character {
         this._helm = helm;
     }
 
-    public void setXpos(int xPos){
 
-        this._xPos = xPos;
-    }
-
-    public void setYpos(int yPos){
-
-        this._yPos = yPos;
-    }
 }
