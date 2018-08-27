@@ -1,6 +1,7 @@
 package amoodley.cli.controller;
 
 import amoodley.cli.view.ConsoleView;
+import amoodley.cli.view.Maps;
 import amoodley.model.characters.Hero;
 import amoodley.utilities.Menus;
 

@@ -1,6 +1,9 @@
 package amoodley.factories;
 
+import amoodley.enums.ArmorType;
 import amoodley.enums.CharacterType;
+import amoodley.enums.HelmType;
+import amoodley.enums.WeaponType;
 import amoodley.model.characters.Hero;
 import amoodley.model.characters.Hunter;
 import amoodley.model.characters.Warrior;
@@ -8,7 +11,7 @@ import amoodley.model.characters.Mage;
 
 public class HeroFactory {
 
-    public static Hero newHero(String name, String type, String level, String xp, String attack, String defense, String hp, String maxHP, String xPos, String yPos){
+    public static Hero newHero(String name, String type, String level, String xp, String attack, String defense, String hp, ){
 
         int _level = 0;
         int _xp = 0;
@@ -30,11 +33,15 @@ public class HeroFactory {
             _xPos = Integer.parseInt(xPos);
             _yPos = Integer.parseInt(yPos);
 
+
             CharacterType tempCharacterType = CharacterType.valueOf(type);
+            HelmType tempHelmType = HelmType.nasal;
+            WeaponType tempWeaponType = WeaponType.spear;
+            ArmorType tempArmorType = ArmorType.jacket;
 
             switch(tempCharacterType){
                 case warrior:
-                    return (new Warrior(name, _level, _xp, _attack, _defense, _hp, _maxHP, _xPos, _yPos));
+                    return (new Warrior(name, tempCharacterType, _level, _xp, _attack, _defense, _hp, tempWeaponType, tempArmorType, tempHelmType, icon));
                 case hunter:
                     return (new Hunter(name, _level, _xp, _attack, _defense, _hp, _maxHP, _xPos, _yPos));
                 case mage:
