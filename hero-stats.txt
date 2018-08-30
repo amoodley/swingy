@@ -1,0 +1,2 @@
+Ash,warrior,0,0,15,10,50,spear,jacket,nasal
+Ash,warrior,0,0,15,10,50,spear,jacket,nasal

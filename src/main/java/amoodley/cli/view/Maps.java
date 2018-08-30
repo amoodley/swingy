@@ -2,7 +2,6 @@ package amoodley.cli.view;
 
 import amoodley.config.Config;
 import amoodley.factories.EnemyFactory;
-import amoodley.model.artifacts.Artifact;
 import amoodley.model.characters.Enemy;
 import amoodley.model.characters.Hero;
 import amoodley.model.GameSimulation;

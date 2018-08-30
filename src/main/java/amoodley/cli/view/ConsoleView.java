@@ -33,7 +33,7 @@ public class ConsoleView {
                         createHero();
                         break;
                     case 2:
-                        // existingHero();
+                        existingHero();
                         break;
                     case 3:
                         System.out.println("\tThank you for playing !");

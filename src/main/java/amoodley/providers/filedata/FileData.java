@@ -1,6 +1,9 @@
 package amoodley.providers.filedata;
 
 import amoodley.config.Config;
+import amoodley.enums.ArmorType;
+import amoodley.enums.HelmType;
+import amoodley.enums.WeaponType;
 import amoodley.factories.HeroFactory;
 import amoodley.interfaces.IDataProvider;
 import amoodley.model.characters.Hero;
@@ -48,7 +51,7 @@ public class FileData implements IDataProvider {
 
                 String[] heroInfo = null;
 
-                if ((heroInfo = info.split(",")) != null && heroInfo.length == 11){
+                if ((heroInfo = info.split(",")) != null && heroInfo.length == 10){
 
                     this.initHeroList();
 
@@ -62,9 +65,12 @@ public class FileData implements IDataProvider {
                     String weapon = heroInfo[7];
                     String armor = heroInfo[8];
                     String helm = heroInfo[9];
-                    String icon = heroInfo[10];
 
-                    Hero hero = HeroFactory.newHero(name, type, level, experience, attack, defense, hitPoints, weapon, armor, helm);
+                    WeaponType tempWeaponType = WeaponType.valueOf(weapon);
+                    ArmorType tempArmorType = ArmorType.valueOf(armor);
+                    HelmType tempHelmType = HelmType.valueOf(helm);
+
+                    Hero hero = HeroFactory.newHero(name, type, level, experience, attack, defense, hitPoints, tempWeaponType, tempArmorType, tempHelmType);
                     if (hero != null){
                         this._heroList.add(hero);
                     }

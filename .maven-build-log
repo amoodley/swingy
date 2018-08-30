@@ -1,0 +1,46 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------------< amoodley:1 >-----------------------------
+[INFO] Building 1 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ 1 ---
+[INFO] Deleting /goinfre/amoodley/Workspace/swingy/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ 1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /goinfre/amoodley/Workspace/swingy/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ 1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 32 source files to /goinfre/amoodley/Workspace/swingy/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ 1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /goinfre/amoodley/Workspace/swingy/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ 1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /goinfre/amoodley/Workspace/swingy/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20.1:test (default-test) @ 1 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running amoodley.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in amoodley.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ 1 ---
+[INFO] Building jar: /goinfre/amoodley/Workspace/swingy/target/1-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.765 s
+[INFO] Finished at: 2018-08-30T13:47:14+02:00
+[INFO] ------------------------------------------------------------------------

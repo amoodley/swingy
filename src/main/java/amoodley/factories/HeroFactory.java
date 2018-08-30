@@ -11,16 +11,13 @@ import amoodley.model.characters.Mage;
 
 public class HeroFactory {
 
-    public static Hero newHero(String name, String type, String level, String xp, String attack, String defense, String hp, ){
+    public static Hero newHero(String name, String type, String level, String xp, String attack, String defense, String hp, WeaponType weapon, ArmorType armor, HelmType helm){
 
         int _level = 0;
         int _xp = 0;
         int _attack = 0;
         int _defense = 0;
         int _hp = 0;
-        int _maxHP = 0;
-        int _xPos = 0;
-        int _yPos = 0;
 
         try {
 
@@ -29,9 +26,6 @@ public class HeroFactory {
             _attack = Integer.parseInt(attack);
             _defense = Integer.parseInt(defense);
             _hp = Integer.parseInt(hp);
-            _maxHP = Integer.parseInt(maxHP);
-            _xPos = Integer.parseInt(xPos);
-            _yPos = Integer.parseInt(yPos);
 
 
             CharacterType tempCharacterType = CharacterType.valueOf(type);
@@ -41,11 +35,11 @@ public class HeroFactory {
 
             switch(tempCharacterType){
                 case warrior:
-                    return (new Warrior(name, tempCharacterType, _level, _xp, _attack, _defense, _hp, tempWeaponType, tempArmorType, tempHelmType, icon));
+                    return (new Warrior(name, tempCharacterType, _level, _xp, _attack, _defense, _hp, tempWeaponType, tempArmorType, tempHelmType));
                 case hunter:
-                    return (new Hunter(name, _level, _xp, _attack, _defense, _hp, _maxHP, _xPos, _yPos));
+                    return (new Hunter(name, tempCharacterType, _level, _xp, _attack, _defense, _hp, tempWeaponType, tempArmorType, tempHelmType));
                 case mage:
-                    return (new Mage(name, _level, _xp, _attack, _defense, _hp, _maxHP, _xPos, _yPos));
+                    return (new Mage(name, tempCharacterType, _level, _xp, _attack, _defense, _hp, tempWeaponType, tempArmorType, tempHelmType));
                 default:
                     break;
             }
@@ -63,19 +57,20 @@ public class HeroFactory {
         int attack = 15;
         int defense = 10;
         int hp = 50;
-        int maxHP = 50;
-        int xPos = 0;
-        int yPos = 0;
+
 
         CharacterType tempCharacterType = type;
+        WeaponType tempWeaponType = WeaponType.spear;
+        ArmorType tempArmorType = ArmorType.jacket;
+        HelmType tempHelmType = HelmType.nasal;
 
         switch (tempCharacterType){
             case warrior:
-                return (new Warrior(name, level, xp, attack, defense, hp, maxHP, xPos, yPos));
+                return (new Warrior(name, tempCharacterType, level, xp, attack, defense, hp, tempWeaponType, tempArmorType, tempHelmType));
             case hunter:
-                return (new Hunter(name, level, xp, attack, defense, hp, maxHP, xPos, yPos));
+                return (new Hunter(name, tempCharacterType, level, xp, attack, defense, hp, tempWeaponType, tempArmorType, tempHelmType));
             case mage:
-                return (new Mage(name, level, xp, attack, defense, hp, maxHP, xPos, yPos));
+                return (new Mage(name, tempCharacterType, level, xp, attack, defense, hp, tempWeaponType, tempArmorType, tempHelmType));
             default:
                 break;
         }

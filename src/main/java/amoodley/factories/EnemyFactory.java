@@ -36,8 +36,7 @@ public class EnemyFactory {
                     20 + random.nextInt(hero.getHitPoints() - 10),
                     WeaponType.values()[random.nextInt(WeaponType.values().length)],
                     ArmorType.values()[random.nextInt(ArmorType.values().length)],
-                    HelmType.values()[random.nextInt(HelmType.values().length)],
-                    "");
+                    HelmType.values()[random.nextInt(HelmType.values().length)]);
 
             enemy.setCoordinates(new Coordinates(random.nextInt(mapSize), random.nextInt(mapSize)));
             if (isSamePosition(enemyList, enemy) || enemy.getCoordinates().isEquals(hero.getCoordinates())){

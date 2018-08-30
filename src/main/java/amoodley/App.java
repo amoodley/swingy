@@ -2,19 +2,19 @@ package amoodley;
 
 import amoodley.cli.view.ConsoleView;
 
+import static amoodley.content.Colors.ANSI_GREEN;
+import static amoodley.content.Colors.ANSI_RESET;
+
 public class App {
 
     public static void main(String[] args) {
-
-        System.out.println("Hello World!");
 
         ConsoleView consoleView = new ConsoleView();
 
         if (args[0].equalsIgnoreCase("cli")){
 
-            System.out.println(" Console View ");
             System.out.println(" ");
-            System.out.println(" Welcome to Swingy ");
+            System.out.println(ANSI_GREEN + "\tWelcome to Swingy " + ANSI_RESET);
 
             consoleView.start();
 

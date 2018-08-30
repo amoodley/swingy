@@ -1,0 +1,23 @@
+Sai (50HP) VS Skeleton (37HP)
+Skeleton hits Sai with a Hadouken Attack, Causing 6 damage.
+Sai: 44HP - Skeleton: 37HP
+Sai hits Skeleton with a Twisting Bolt Attack, Causing 5 damage.
+Sai: 44HP - Skeleton: 32HP
+Skeleton hits Sai with a Twisting Bolt Attack, Causing 6 damage.
+Sai: 38HP - Skeleton: 32HP
+Skeleton hits Sai with a Fireball Attack, Causing 6 damage.
+Sai: 32HP - Skeleton: 32HP
+Skeleton hits Sai with a Paralyzing Chain Attack, Causing 6 damage.
+Sai: 26HP - Skeleton: 32HP
+Skeleton hits Sai with a Blizzard Attack, Causing 6 damage.
+Sai: 20HP - Skeleton: 32HP
+Sai hits Skeleton with a Twisting Bolt Attack, Causing 5 damage.
+Sai: 20HP - Skeleton: 27HP
+Skeleton hits Sai with a Hadouken Attack, Causing 6 damage.
+Sai: 14HP - Skeleton: 27HP
+Skeleton hits Sai with a Serpent Sting Attack, Causing 6 damage.
+Sai: 8HP - Skeleton: 27HP
+Skeleton hits Sai with a Gomu Gomu no Bazooka Attack, Causing 6 damage.
+Sai: 2HP - Skeleton: 27HP
+Skeleton hits Sai with a Paralyzing Chain Attack, Causing 6 damage.
+Sai: -4HP - Skeleton: 27HP
