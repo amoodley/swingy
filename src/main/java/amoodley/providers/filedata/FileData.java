@@ -41,17 +41,15 @@ public class FileData implements IDataProvider {
     }
 
     public List<Hero> getHeroList(){
-
         String fileInfo = readFile.getContent(this._file);
         String[] fileInfoArray = null;
-
         if (fileInfo != null && (fileInfoArray = fileInfo.split("\n")) != null){
 
             for (String info : fileInfoArray){
 
                 String[] heroInfo = null;
-
-                if ((heroInfo = info.split(",")) != null && heroInfo.length == 10){
+                heroInfo = info.split(",");
+                if (heroInfo.length == 10){
 
                     this.initHeroList();
 

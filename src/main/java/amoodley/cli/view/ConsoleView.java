@@ -12,6 +12,8 @@ import amoodley.config.Config;
 import java.util.List;
 import java.util.Scanner;
 
+import static amoodley.content.Colors.*;
+
 
 public class ConsoleView {
 
@@ -36,7 +38,7 @@ public class ConsoleView {
                         existingHero();
                         break;
                     case 3:
-                        System.out.println("\tThank you for playing !");
+                        System.out.println("\n\tThank you for playing !");
                         System.exit(0);
                     default:
                         System.out.println("\tUnrecognised option selected");
@@ -94,10 +96,10 @@ public class ConsoleView {
 
     public static void declareHero(CharacterType hType) {
 
-        System.out.println("\tGive your " + hType + " a name:");
+        System.out.println(ANSI_GREEN + "\tGive your " + hType + " a name:" + ANSI_RESET);
         Scanner reader = new Scanner(System.in);
         String name = null;
-        if (Cache.HeroList != null &&Cache.HeroList.size() != 0){
+        if (Cache.HeroList != null && Cache.HeroList.size() != 0){
 
             while (true) {
 
@@ -107,7 +109,7 @@ public class ConsoleView {
                 for (Hero hero : Cache.HeroList){
 
                     if (hero.getName().equalsIgnoreCase(name) && isFound == false){
-                        System.out.println("A Hero with name already exists. Please try another name.");
+                        System.out.println(ANSI_RED + "\nA Hero with name already exists. Please try another name." + ANSI_RESET);
                         isFound = true;
                     }
                 }
@@ -127,8 +129,7 @@ public class ConsoleView {
     }
 
     public static void existingHero(){
-
-        Scanner reader= new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);
         Hero hero = null;
         int count  = 1;
         int i = 0;
@@ -137,18 +138,19 @@ public class ConsoleView {
         boolean isMatch = false;
         heroList = Cache.HeroList;
 
-        if (heroList== null || heroList.size() <= 0){
-            System.out.println("THERE ARE NO HEROES YOU CAN CHOOSE");
+        if (heroList == null || heroList.size() <= 0){
+            System.out.println("\n"+ ANSI_RED + "THERE ARE NO HEROES YOU CAN CHOOSE" + ANSI_RESET);
             start();
         } else {
-            System.out.println("CHOOSE YOUR CHARACTER");
+            System.out.println(ANSI_GREEN + "\nCHOOSE YOUR CHARACTER\n" + ANSI_RESET);
             for (int index = 0; index < heroList.size(); index++){
+                System.out.print(ANSI_CYAN + "\t");
                 System.out.print(count);
                 System.out.print(seperator);
                 System.out.print(Menus.printHeroNames(heroList.get(index)));
                 count++;
             }
-            System.out.println("\t0. Back");
+            System.out.println("\t0. Back" + ANSI_RESET);
         }
         int choice = 0;
 
@@ -164,7 +166,7 @@ public class ConsoleView {
 
                 if (hero.getHitPoints() <= 0){
 
-                    System.out.println("THE HERO YOU HAVE SELECTED IS NOT AVAILABLE!");
+                    System.out.println(ANSI_RED + "\nTHE HERO YOU HAVE SELECTED IS NOT AVAILABLE!" + ANSI_RESET);
                     System.out.println("HERO HIT POINTS: " + hero.getHitPoints());
                     System.out.println("TRY AGAIN!");
                     existingHero();
@@ -174,7 +176,7 @@ public class ConsoleView {
                 }
             } else {
 
-                System.out.println("THE HERO YOU HAVE SELECTED DOES NOT EXIST! PLEASE TRY AGAIN!");
+                System.out.println(ANSI_RED + "\nTHE HERO YOU HAVE SELECTED DOES NOT EXIST! PLEASE TRY AGAIN!" + ANSI_RESET);
                 existingHero();
             }
         }

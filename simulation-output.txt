@@ -1,23 +1,19 @@
-Sai (50HP) VS Skeleton (37HP)
-Skeleton hits Sai with a Hadouken Attack, Causing 6 damage.
-Sai: 44HP - Skeleton: 37HP
-Sai hits Skeleton with a Twisting Bolt Attack, Causing 5 damage.
-Sai: 44HP - Skeleton: 32HP
-Skeleton hits Sai with a Twisting Bolt Attack, Causing 6 damage.
-Sai: 38HP - Skeleton: 32HP
-Skeleton hits Sai with a Fireball Attack, Causing 6 damage.
-Sai: 32HP - Skeleton: 32HP
-Skeleton hits Sai with a Paralyzing Chain Attack, Causing 6 damage.
-Sai: 26HP - Skeleton: 32HP
-Skeleton hits Sai with a Blizzard Attack, Causing 6 damage.
-Sai: 20HP - Skeleton: 32HP
-Sai hits Skeleton with a Twisting Bolt Attack, Causing 5 damage.
-Sai: 20HP - Skeleton: 27HP
-Skeleton hits Sai with a Hadouken Attack, Causing 6 damage.
-Sai: 14HP - Skeleton: 27HP
-Skeleton hits Sai with a Serpent Sting Attack, Causing 6 damage.
-Sai: 8HP - Skeleton: 27HP
-Skeleton hits Sai with a Gomu Gomu no Bazooka Attack, Causing 6 damage.
-Sai: 2HP - Skeleton: 27HP
-Skeleton hits Sai with a Paralyzing Chain Attack, Causing 6 damage.
-Sai: -4HP - Skeleton: 27HP
+Bob_The_Builder (50HP) VS Troll (35HP)
+Bob_The_Builder hits Troll with a Fireball Attack, Causing 10 damage.
+Bob_The_Builder: 50HP - Troll: 25HP
+Bob_The_Builder hits Troll with a Dual Slash Attack, Causing 10 damage.
+Bob_The_Builder: 50HP - Troll: 15HP
+Troll hits Bob_The_Builder with a Hadouken Attack, Causing 8 damage.
+Bob_The_Builder: 42HP - Troll: 15HP
+Troll hits Bob_The_Builder with a Gomu Gomu no Bazooka Attack, Causing 8 damage.
+Bob_The_Builder: 34HP - Troll: 15HP
+Troll hits Bob_The_Builder with a Blizzard Attack, Causing 8 damage.
+Bob_The_Builder: 26HP - Troll: 15HP
+Troll hits Bob_The_Builder with a Serpent Sting Attack, Causing 8 damage.
+Bob_The_Builder: 18HP - Troll: 15HP
+Troll hits Bob_The_Builder with a Dual Slash Attack, Causing 8 damage.
+Bob_The_Builder: 10HP - Troll: 15HP
+Troll hits Bob_The_Builder with a Serpent Sting Attack, Causing 8 damage.
+Bob_The_Builder: 2HP - Troll: 15HP
+Troll hits Bob_The_Builder with a Serpent Sting Attack, Causing 8 damage.
+Bob_The_Builder: -6HP - Troll: 15HP

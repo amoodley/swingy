@@ -1,6 +1,8 @@
 package amoodley;
 
 import amoodley.cli.view.ConsoleView;
+import amoodley.config.Config;
+import amoodley.providers.Cache;
 
 import static amoodley.content.Colors.ANSI_GREEN;
 import static amoodley.content.Colors.ANSI_RESET;
@@ -8,6 +10,9 @@ import static amoodley.content.Colors.ANSI_RESET;
 public class App {
 
     public static void main(String[] args) {
+
+        Config.init(args);
+        Cache.init();
 
         ConsoleView consoleView = new ConsoleView();
 

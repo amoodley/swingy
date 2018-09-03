@@ -23,7 +23,7 @@ public class CliGame {
         _hero = hero;
         Menus.printStats(_hero);
         System.out.println("\n___________ " + ANSI_GREEN + "DARE TO START THE GAME" + ANSI_RESET + " __________");
-        System.out.println("\n\t"+ ANSI_GREEN +"DO YOU WISH TO CONTINUE WITH THIS HERO?: " + hero.getName());
+        System.out.println("\n"+ ANSI_GREEN +"DO YOU WISH TO CONTINUE WITH THIS HERO?: " + hero.getName());
         System.out.println(ANSI_CYAN + "\t1. Yes");
         System.out.println("\t2. No" + ANSI_RESET);
 
@@ -31,7 +31,7 @@ public class CliGame {
         switch(i){
 
             case 1:
-                System.out.println("YOUR MISSION IS TO GET TO THE END OF THE MAP. ENJOY!");
+                System.out.println(ANSI_GREEN + "\nYOUR MISSION IS TO GET TO THE END OF THE MAP. ENJOY!");
                 Maps map = new Maps();
                 map.init(_hero);
                 map.drawMap(_hero);

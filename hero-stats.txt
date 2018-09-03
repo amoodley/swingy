@@ -1,2 +1,2 @@
-Ash,warrior,0,0,15,10,50,spear,jacket,nasal
-Ash,warrior,0,0,15,10,50,spear,jacket,nasal
+Sai,hunter,0,200,15,10,0,spear,jacket,nasal
+Bob_The_Builder,mage,0,0,15,10,50,spear,jacket,nasal

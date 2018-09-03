@@ -36,7 +36,7 @@ public class Menus {
 
     public static void printStats(Hero _hero){
 
-        String hero_info = ANSI_GREEN + "\nYOUR HERO STATS\n" +
+        String hero_info = ANSI_GREEN + "\n\tYOUR HERO STATS\n" +
                 ANSI_CYAN + "\tName: " + _hero.getName() + "\n" +
                 "\tType: " + _hero.getType() + "\n" +
                 "\tLevel: " + _hero.getLevel() + "\n" +
@@ -78,7 +78,7 @@ public class Menus {
 
     public static void PrintFightOpponents(Hero hero, Enemy enemy){
 
-        System.out.println(ANSI_GREEN + hero.getName() + ANSI_RESET + "\tVS\t" + ANSI_RED + enemy.getName());
+        System.out.println(ANSI_GREEN + hero.getName() + ANSI_RESET + "\t\tVS\t" + ANSI_RED + enemy.getName());
         System.out.println(ANSI_GREEN + "Attack: " + hero.getAttack() + ANSI_RESET + "\t|\t" + ANSI_RED +  enemy.getAttack());
         System.out.println(ANSI_GREEN + "Defense: " + hero.getDefense() + ANSI_RESET +"\t|\t" + ANSI_RED + enemy.getDefense());
         System.out.println(ANSI_GREEN +"Hit Points: " + hero.getHitPoints() + ANSI_RESET +"\t|\t" + ANSI_RED + enemy.getHitPoints());

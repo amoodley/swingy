@@ -13,6 +13,10 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+import static amoodley.content.Colors.ANSI_GREEN;
+import static amoodley.content.Colors.ANSI_RED;
+import static amoodley.content.Colors.ANSI_RESET;
+
 public class Maps {
 
     private Random rand = new Random();
@@ -33,7 +37,7 @@ public class Maps {
         if (hero.getCoordinates().getX() == mapSize || hero.getCoordinates().getY() == mapSize ||
                 hero.getCoordinates().getX() == -1 || hero.getCoordinates().getY() == -1){
 
-            System.out.println("_______________YOU WON THE GAME_______________");
+            System.out.println(ANSI_GREEN + "\n_______________YOU WON THE GAME_______________\n" + ANSI_RESET);
             GameSimulation.winGame(hero);
             ConsoleView.start();
         }
@@ -86,7 +90,7 @@ public class Maps {
     public void drawMap(Hero hero){
 
         System.out.println(" ");
-        System.out.println("YOUR COORDINATES: " + hero.getCoordinates().getX() + ", " + hero.getCoordinates().getY());
+        System.out.println(ANSI_GREEN + "YOUR COORDINATES: " + hero.getCoordinates().getX() + ", " + hero.getCoordinates().getY() + ANSI_RESET);
 
         for (int x = 0; x < this.mapSize; x++){
 
@@ -142,13 +146,13 @@ public class Maps {
                             int rn = rand.nextInt(2);
                             if (rn == 0){
 
-                                System.out.println("YOU HAVE MANAGED TO EVADE THE ENEMY");
+                                System.out.println(ANSI_GREEN + "YOU HAVE MANAGED TO EVADE THE ENEMY" + ANSI_RESET);
                                 hero.getCoordinates().setX(GameSimulation.oldX);
                                 hero.getCoordinates().setY(GameSimulation.oldY);
                                 drawMap(hero);
                             } else if (rn == 1){
 
-                                System.out.println("UNFORTUNATELY YOU DIDN'T MANAGE TO ESCAPE");
+                                System.out.println(ANSI_RED + "\nUNFORTUNATELY YOU DIDN'T MANAGE TO ESCAPE" + ANSI_RESET);
                                 Fight(hero, enemyModel);
                             }
                             break;
@@ -160,7 +164,7 @@ public class Maps {
                     }
                 } else {
 
-                    System.out.println("Input must be numeric, please select another option");
+                    System.out.println(ANSI_RED + "Input must be numeric, please select another option");
                     FightOrRun(hero, enemyModel);
                 }
             }
@@ -183,19 +187,19 @@ public class Maps {
             }
             if (!gs.isHeroAlive(gs.getHero()) && !gs.isHeroAlive(gs.getEnemy())){
 
-                System.out.println("Seems everyone has died. Including You!");
+                System.out.println(ANSI_RED + "Seems everyone has died. Including You!");
             } else {
 
                 String msg = "";
                 if (gs.isHeroAlive(gs.getHero())){
 
                     msg = gs.getHero().getName() + " WON THE FIGHT!";
-                    System.out.println("FIGHT WON: " + msg);
+                    System.out.println(ANSI_GREEN + "FIGHT WON: " + msg + ANSI_RESET);
                     GameSimulation.resetHero(hero);
                     GameSimulation.winFight(hero, enemy);
                     artifact = GameSimulation.dropArtifact(enemy);
-                    System.out.println("THE ENEMY DROPPED A " + artifact + ". DO YOU WISH TO KEEP IT?");
-                    System.out.println("\t1. YES");
+                    System.out.println(ANSI_GREEN + "THE ENEMY DROPPED A " + artifact + ". DO YOU WISH TO KEEP IT?");
+                    System.out.println("\n\t1. YES");
                     System.out.println("\t2. NO");
                     PickOrNot(hero, enemy);
                     enemyList.remove(enemy);
@@ -203,9 +207,8 @@ public class Maps {
                 } else {
 
                     msg = gs.getEnemy().getName() + " WON THE FIGHT";
-                    System.out.println("FIGHT LOST: " + msg);
-                    System.out.println(" ");
-                    System.out.println("_______________GAME OVER_______________");
+                    System.out.println(ANSI_RED + "\nFIGHT LOST: " + msg + ANSI_RED);
+                    System.out.println(ANSI_RED + "\n_______________GAME OVER_______________" + ANSI_RESET);
                     System.out.println(" ");
                     GameSimulation.lostGame(hero);
                     ConsoleView.start();
